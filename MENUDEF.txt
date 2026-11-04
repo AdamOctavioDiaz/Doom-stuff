@@ -1,0 +1,52 @@
+// VANDAL RTX-style visual controls.
+DefaultListMenu
+{
+    Selector "M_SKULL1", -24, -6
+    Linespacing 14
+    Font "BigFont", "Red", "White"
+}
+
+ListMenu "MainMenu"
+{
+    StaticPatch 94, 2, "M_DOOM"
+    Position 97, 72
+    TextItem "New Game",   "n", "PlayerclassMenu"
+    TextItem "Options",    "o", "OptionsMenu"
+    TextItem "RTX Visuals", "r", "VandalRTXOptions"
+    TextItem "Save Game",  "s", "SaveGameMenu"
+    TextItem "Load Game",  "l", "LoadGameMenu"
+    TextItem "Exit",       "q", "QuitMenu"
+}
+
+AddOptionMenu "OptionsMenu"
+{
+    StaticText " "
+    Submenu "VANDAL RTX-STYLE VISUALS", "VandalRTXOptions"
+}
+
+OptionMenu "VandalRTXOptions"
+{
+    Title "VANDAL RTX-STYLE VISUALS"
+    StaticText "RTX-STYLE CORE", 1
+    Command "APPLY 4070 SUPER CORE", "r_models 1; r_skipmats 0; r_dynlights 1; gl_lights 1; gl_light_models 1; gl_light_sprites 1; gl_light_particles 1; gl_light_shadowmap 1; gl_shadowmap_quality 1024; gl_ssao 3; gl_ssao_strength 0.8; gl_bloom 1; gl_bloom_amount 0.65; gl_interpolate_model_frames 1; gl_texture_filter_anisotropic 16; gl_seamless 1; gl_mirror_envmap 1; gl_plane_reflection 0; gl_precache 1; echo VANDAL RTX-style core applied"
+    StaticText "LIGHTING", 1
+    Option "Dynamic Lights", "gl_lights", "OnOff"
+    Option "Model Lighting", "gl_light_models", "OnOff"
+    Option "Sprite Lighting", "gl_light_sprites", "OnOff"
+    Option "Particle Lighting", "gl_light_particles", "OnOff"
+    Option "Light Shadowmaps", "gl_light_shadowmap", "OnOff"
+    Slider "Shadowmap Quality", "gl_shadowmap_quality", 128, 1024, 128, 0
+    StaticText "POST PROCESS", 1
+    Slider "Ambient Occlusion", "gl_ssao", 0, 3, 1, 0
+    Slider "AO Strength", "gl_ssao_strength", 0.0, 1.5, 0.1, 1
+    Option "Bloom", "gl_bloom", "OnOff"
+    Slider "Bloom Strength", "gl_bloom_amount", 0.0, 2.0, 0.1, 1
+    StaticText "MODEL / MATERIAL QUALITY", 1
+    Option "MD3 Models", "r_models", "OnOff"
+    Option "Model Interpolation", "gl_interpolate_model_frames", "OnOff"
+    Slider "Anisotropic Filtering", "gl_texture_filter_anisotropic", 1, 16, 1, 0
+    Option "Seamless Textures", "gl_seamless", "OnOff"
+    Option "Environment Maps", "gl_mirror_envmap", "OnOff"
+    Option "Plane Reflections", "gl_plane_reflection", "OnOff"
+    Option "Precache Materials", "gl_precache", "OnOff"
+}

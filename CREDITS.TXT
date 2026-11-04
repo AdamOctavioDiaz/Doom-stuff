@@ -1,0 +1,27 @@
+VANDAL - CREDITS
+================
+
+PROJECT CREATOR
+Adam Diaz
+
+ORIGINAL GAME
+DOOM and DOOM II by id Software
+
+SOURCE PORTS AND TECHNOLOGY
+The ZDoom, GZDoom, and UZDoom development teams and contributors
+
+EDITING TOOLS
+The Ultimate Doom Builder team and contributors
+The SLADE team and contributors
+
+DOOM COMMUNITY
+With appreciation to every Doom-community mapper, modder, artist, musician,
+programmer, tester, tutorial writer, archivist, source-port contributor, tool
+developer, forum member, server administrator, and player--past and present.
+
+The Doom community has used countless screen names across more than three
+decades and there is no complete authoritative roster. This acknowledgment is
+intended to include every community member, including those whose handles are
+not individually recorded here.
+
+Thank you for keeping Doom alive.
